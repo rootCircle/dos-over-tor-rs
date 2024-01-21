@@ -1,0 +1,18 @@
+[package]
+name = "dos-over-tor"
+version = "0.1.0"
+edition = "2021"
+default-run = "dos_over_tor"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.79"
+arti-client = { version = "0.13.0", features = [ "bridge-client", "pt-client" ] }
+arti-hyper = { version = "0.13.0", features = ["default"] }
+futures = "0.3.30"
+hyper = { version = "0.14.28", features = ["http1", "client", "runtime"] }
+tls-api = "0.9.0"
+tls-api-native-tls = "0.9.0"
+tokio = { version = "1.35.1"}
+tor-rtcompat = { version = "0.9.7" }
+url = "2.5.0"
